@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TRIUMPH - Motorcycle Collection</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <main class="website">
+
+        <!-- Navigation bar -->
+        <nav class="navbar">
+            <h3 class="logo">TRIUMPH</h3>
+
+            <div class="nav-links">
+                <a href="#about">About us</a>
+                <a href="#services">Services</a>
+                <a href="#work">Selected work</a>
+                <a href="#reviews">Reviews</a>
+            </div>
+
+            <div class="nav-right">
+                <span>PL / <b>EN</b></span>
+                <a href="#contact" class="nav-button">Book your ride</a>
+            </div>
+        </nav>
+
+        <!-- Hero section -->
+        <section class="hero" id="about">
+
+            <div class="hero-content">
+                <p class="eyebrow">FOR THE RIDE</p>
+
+                <h1>
+                    WELCOME TO TRIUMPH
+                    <span>WHERE EVERY STORY SPARKS A JOURNEY</span>
+                </h1>
+
+                <p class="description">
+                    Timeless design and beautiful craftsmanship,
+                    blended with contemporary capability.
+                    Discover the Triumph motorcycle collection
+                    and find the perfect ride for your journey.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#contact" class="primary-button">
+                        KEEP ME UPDATED
+                    </a>
+
+                    <a href="#contact" class="secondary-button">
+                        ORDER INQUIRY
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero image -->
+            <div class="hero-image">
+                <img
+                    src="https://my.dealerfeeds.app/i/?api_id=188&image_id=22796170-large"
+                    alt="Triumph motorcycle"
+                >
+            </div>
+
+        </section>
+
+        <!-- Motorcycle collection -->
+        <section class="trusted" id="work">
+
+            <span class="trusted-label">GO FURTHER</span>
+
+            <button class="bike-button"
+                data-bike="Scrambler 400X"
+                aria-pressed="false">
+                Scrambler 400X
+            </button>
+
+            <button class="bike-button"
+                data-bike="Scrambler XC"
+                aria-pressed="false">
+                Scrambler XC
+            </button>
+
+            <button class="bike-button"
+                data-bike="Speed 400"
+                aria-pressed="false">
+                Speed 400
+            </button>
+
+            <button class="bike-button"
+                data-bike="Speed T4"
+                aria-pressed="false">
+                Speed T4
+            </button>
+
+            <button class="bike-button"
+                data-bike="Tracker 400"
+                aria-pressed="false">
+                Tracker 400
+            </button>
+
+        </section>
+
+        <!-- Motorcycle details -->
+        <section
+            class="bike-info"
+            id="bike-info"
+            aria-live="polite"
+            aria-labelledby="bike-name"
+            hidden
+        >
+
+            <button
+                class="close-button"
+                id="close-button"
+                aria-label="Close motorcycle details"
+            >
+                &times;
+            </button>
+
+            <p class="eyebrow">EXPLORE THE COLLECTION</p>
+
+            <h2 id="bike-name"></h2>
+
+            <!-- Image changes when a model is selected -->
+            <img
+                id="bike-image"
+                class="bike-detail-image"
+                src=""
+                alt="Selected motorcycle"
+            >
+
+            <p id="bike-description"></p>
+
+            <a href="#contact" class="primary-button inquiry-button">
+                MAKE AN INQUIRY
+            </a>
+
+        </section>
+
+        <!-- Services -->
+        <section class="extra-section" id="services">
+            <p class="eyebrow">OUR SERVICES</p>
+            <h2>Made for your journey.</h2>
+
+            <p>
+                Explore motorcycle models, request information,
+                and discover your next riding experience.
+            </p>
+        </section>
+
+        <!-- Reviews -->
+        <section class="extra-section" id="reviews">
+            <p class="eyebrow">RIDER EXPERIENCE</p>
+            <h2>Every ride tells a story.</h2>
+
+            <p>
+                Find the motorcycle that matches your style
+                and the journeys you want to take.
+            </p>
+        </section>
+
+        <!-- Contact -->
+        <section class="extra-section" id="contact">
+            <p class="eyebrow">GET IN TOUCH</p>
+            <h2>Ready for your next ride?</h2>
+
+            <p>
+                Contact your local Triumph dealer for current
+                prices, specifications, and availability.
+            </p>
+
+            <a
+                href="https://www.triumphmotorcycles.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="primary-button"
+            >
+                VISIT TRIUMPH
+            </a>
+        </section>
+
+        <!-- Footer -->
+        <footer class="page-footer">
+            <p>&copy; 2026 TRIUMPH Motorcycle Collection</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>

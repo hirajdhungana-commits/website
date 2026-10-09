@@ -1,0 +1,530 @@
+
+/* =========================
+   RESET AND GENERAL STYLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    padding: 30px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* =========================
+   MAIN WEBSITE CONTAINER
+========================= */
+
+.website {
+    max-width: 1150px;
+    margin: 40px auto;
+    padding: 25px 40px;
+    background-color: #000000;
+}
+
+/* =========================
+   NAVIGATION BAR
+========================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 16px;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a,
+.nav-right a {
+    color: #db7171;
+    font-size: 12px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-right a:hover {
+    color: #ffffff;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 10px;
+}
+
+.nav-right span {
+    color: #fefafa;
+}
+
+.nav-right span b {
+    color: #cd0a0a;
+}
+
+.nav-button {
+    background: #171717;
+    color: #ffffff !important;
+    padding: 11px 17px;
+    border-radius: 25px;
+    box-shadow: 0 5px 12px rgba(172, 0, 0, 0.2);
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    padding: 35px 0;
+    min-height: 390px;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 440px;
+}
+
+.eyebrow {
+    color: #bd8e72;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 22px;
+}
+
+h1 {
+    font-size: clamp(32px, 4vw, 44px);
+    line-height: 1.08;
+    letter-spacing: -2px;
+    margin-bottom: 18px;
+}
+
+h1 span {
+    display: block;
+    color: #bd8e72;
+    margin-top: 8px;
+}
+
+.description {
+    max-width: 390px;
+    font-size: 14px;
+    color: #888888;
+    line-height: 1.7;
+    margin-bottom: 22px;
+}
+
+/* =========================
+   HERO BUTTONS
+========================= */
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.primary-button,
+.secondary-button {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 25px;
+    padding: 12px 20px;
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.primary-button {
+    background: #171717;
+    color: #ffffff;
+    border: 1px solid #292929;
+}
+
+.primary-button:hover {
+    background: #bd8e72;
+    color: #000000;
+    transform: translateY(-2px);
+}
+
+.secondary-button {
+    color: #dddddd;
+    border: 1px solid #d6d0c9;
+}
+
+.secondary-button:hover {
+    background: #bd8e72;
+    color: #000000;
+}
+
+/* =========================
+   HERO IMAGE
+========================= */
+
+.hero-image {
+    flex: 1;
+    max-width: 460px;
+    height: 360px;
+    overflow: hidden;
+    border-radius: 45% 35% 48% 32% / 12% 28% 20% 38%;
+    background: #171717;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* =========================
+   MOTORCYCLE COLLECTION
+========================= */
+
+.trusted {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 0;
+    border-top: 1px solid #242424;
+    border-bottom: 1px solid #242424;
+}
+
+.trusted-label {
+    color: #bd8e72;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Clickable motorcycle buttons */
+
+.bike-button {
+    position: relative;
+    background: transparent;
+    border: none;
+    color: #aaaaaa;
+    font-family: inherit;
+    font-size: 13px;
+    cursor: pointer;
+    padding: 8px 0;
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.bike-button:hover {
+    color: #bd8e72;
+    transform: translateY(-2px);
+}
+
+.bike-button.active {
+    color: #bd8e72;
+}
+
+.bike-button.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: #bd8e72;
+}
+
+.bike-button:focus-visible,
+.close-button:focus-visible {
+    outline: 2px solid #bd8e72;
+    outline-offset: 5px;
+}
+
+/* =========================
+   MOTORCYCLE DETAIL PANEL
+========================= */
+
+.bike-info {
+    position: relative;
+    margin-top: 30px;
+    padding: 35px;
+    border: 1px solid #38302b;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #171412, #090909);
+    animation: fadeIn 0.3s ease;
+}
+
+.bike-info h2 {
+    color: #bd8e72;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+/* Selected motorcycle image */
+
+.bike-detail-image {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    height: 340px;
+    object-fit: cover;
+    object-position: center;
+    margin: 20px 0;
+    border-radius: 12px;
+    background-color: #171717;
+    transition: opacity 0.3s ease;
+}
+
+.bike-info p:not(.eyebrow) {
+    max-width: 650px;
+    color: #aaaaaa;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+.inquiry-button {
+    margin-top: 5px;
+}
+
+/* Close button */
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 18px;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 26px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover {
+    color: #bd8e72;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* =========================
+   EXTRA SECTIONS
+========================= */
+
+.extra-section {
+    padding: 55px 0;
+    border-bottom: 1px solid #242424;
+}
+
+.extra-section h2 {
+    font-size: clamp(24px, 3vw, 34px);
+    margin-bottom: 15px;
+}
+
+.extra-section > p:not(.eyebrow) {
+    max-width: 550px;
+    color: #888888;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.page-footer {
+    padding-top: 25px;
+    color: #777777;
+    font-size: 12px;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   TABLET RESPONSIVENESS
+========================= */
+
+@media (max-width: 900px) {
+    body {
+        padding: 15px;
+    }
+
+    .website {
+        margin: 15px auto;
+        padding: 20px;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 18px;
+        margin-top: 12px;
+    }
+
+    .hero {
+        gap: 25px;
+    }
+
+    .hero-image {
+        height: 300px;
+    }
+
+    .trusted {
+        justify-content: flex-start;
+        gap: 15px 22px;
+    }
+}
+
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+
+@media (max-width: 600px) {
+    body {
+        padding: 8px;
+    }
+
+    .website {
+        padding: 15px;
+        margin: 10px auto;
+    }
+
+    .navbar {
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 15px;
+    }
+
+    .nav-right {
+        gap: 8px;
+    }
+
+    .nav-links {
+        gap: 14px;
+    }
+
+    .nav-links a,
+    .nav-right a {
+        font-size: 11px;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: stretch;
+        padding-top: 40px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: clamp(30px, 9vw, 40px);
+    }
+
+    .description {
+        font-size: 13px;
+    }
+
+    .hero-image {
+        width: 100%;
+        max-width: 100%;
+        height: 260px;
+        flex: auto;
+    }
+
+    .trusted {
+        gap: 12px 18px;
+    }
+
+    .trusted-label {
+        width: 100%;
+    }
+
+    .bike-button {
+        font-size: 12px;
+    }
+
+    .bike-info {
+        padding: 25px 18px;
+    }
+
+    .bike-info h2 {
+        font-size: 24px;
+        padding-right: 20px;
+    }
+
+    .bike-detail-image {
+        height: 230px;
+    }
+
+    .extra-section {
+        padding: 40px 0;
+    }
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
